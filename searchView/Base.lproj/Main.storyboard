@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="searchView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" showsBookmarkButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FD-s8-IC8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zoe-Wb-gpa">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="SZf-DW-0TR">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SZf-DW-0TR" id="3iH-jH-B8D">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="E99-bO-8uR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="UPi-Vx-JJ0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zoe-Wb-gpa" firstAttribute="top" secondItem="6FD-s8-IC8" secondAttribute="bottom" symbolic="YES" id="4B8-cw-lam"/>
+                            <constraint firstAttribute="bottom" secondItem="Zoe-Wb-gpa" secondAttribute="bottom" id="5HY-zG-aFf"/>
+                            <constraint firstItem="6FD-s8-IC8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7m0-L1-7OH"/>
+                            <constraint firstItem="6FD-s8-IC8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NOD-gt-271"/>
+                            <constraint firstItem="Zoe-Wb-gpa" firstAttribute="top" secondItem="6FD-s8-IC8" secondAttribute="bottom" id="YRK-rm-fxH"/>
+                            <constraint firstItem="Zoe-Wb-gpa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m5V-SS-CzP"/>
+                            <constraint firstItem="6FD-s8-IC8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="obs-Zy-D2k"/>
+                            <constraint firstItem="Zoe-Wb-gpa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tvZ-kK-8qJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchText" destination="6FD-s8-IC8" id="IMC-f5-GC2"/>
+                        <outlet property="searchtable" destination="Zoe-Wb-gpa" id="KAB-0f-1jR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>
